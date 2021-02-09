@@ -37,6 +37,8 @@
   },
   "devDependencies": {
     "big.js": "^6.0.3",
-    "prop-types": "^15.7.2"
+    "eslint": "^7.19.0",
+    "prop-types": "^15.7.2",
+    "stylelint": "^13.9.0"
   }
 }
