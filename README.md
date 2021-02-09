@@ -3,11 +3,15 @@
 This is a Calculator app created using React
 
 
-# Built With
+## Built With
 1. JavaScript / ES6
 2. React.js
 3. HTML5
 5. CSS3
+
+
+## Live Demo
+Available [here](https://calculator-anewman15.herokuapp.com/)
 
 ## Author
 
