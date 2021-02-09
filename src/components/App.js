@@ -1,14 +1,12 @@
+import React from 'react';
 import '../styles/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>
-          Calculator App using React
-        </h1>
-      </header>
-    </div>
+    <React.Fragment>
+      <Display />
+      <ButtonPanel />
+    </React.Fragment>
   );
 }
 
