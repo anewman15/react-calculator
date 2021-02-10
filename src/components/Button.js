@@ -1,11 +1,13 @@
+/*
+ eslint-disable no-unused-vars
+*/
+
 import React from 'react';
 
-export default class Button extends React.Component {
-  render() {
-    return (
-      <button>
-        {this.props.btnName}
-      </button>
-    );
-  }
-}
+const Button = props => (
+  <button>
+    {props.btnName}
+  </button>
+);
+
+export default Button;
