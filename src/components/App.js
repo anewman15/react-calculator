@@ -3,13 +3,20 @@ import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import '../styles/App.css';
 
-function App() {
-  return (
-    <React.Fragment>
-      <Display value='0' />
-      <ButtonPanel numbers='123' />
-    </React.Fragment>
-  );
-}
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      result: 0,
+    };
+  }
 
-export default App;
+  render() {
+    return (
+      <div>
+        <Display calcResult={this.state.result} />
+        <ButtonPanel numbers='123' />
+      </div>
+    );
+  }
+}
