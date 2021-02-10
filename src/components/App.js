@@ -9,9 +9,13 @@ import '../styles/App.css';
 
 const App = props => (
   <div>
-    <Display calcResult={this.state.result} />
+    <Display calcResult={props.result} />
     <ButtonPanel />
   </div>
 );
+
+App.defaultProps = {
+  result: '0',
+};
 
 export default App;
