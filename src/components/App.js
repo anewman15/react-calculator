@@ -1,3 +1,7 @@
+/*
+ eslint-disable no-unused-vars
+*/
+
 import React from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
@@ -7,7 +11,7 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      result: 0,
+      result: '0',
     };
   }
 

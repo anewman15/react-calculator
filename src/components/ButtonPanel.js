@@ -1,10 +1,14 @@
+/*
+ eslint-disable no-unused-vars
+*/
+
 import React from 'react';
 import Button from './Button';
 
 export default class ButtonPanel extends React.Component {
   render() {
     return (
-      <React.Fragment>
+      <div>
         <div>
           Calculator Buttons {this.props.numbers}
         </div>
@@ -38,7 +42,7 @@ export default class ButtonPanel extends React.Component {
           <Button btnName="." />
           <Button btnName="=" />
         </div>
-      </React.Fragment>
+      </div>
     );
   }
 }
