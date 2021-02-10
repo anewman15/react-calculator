@@ -1,5 +1,3 @@
-import Big from 'big.js';
-
 const calculate = (calculatorData, btnName) => {
   const data = { ...calculatorData };
   switch (btnName) {
