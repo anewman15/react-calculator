@@ -7,19 +7,19 @@ const operate = (first, second, operation) => {
   let result;
   switch (operation) {
     case '%':
-      result = (firstNum * 100) / secondNum;
+      result = firstNum.times(100).div(secondNum).toNumber();
       return result;
     case '/':
-      result = firstNum / secondNum;
+      result = firstNum.div(secondNum).toNumber();
       return result;
     case 'X':
-      result = firstNum * secondNum;
+      result = firstNum.times(secondNum).toNumber();
       return result;
     case '+':
-      result = firstNum - secondNum;
+      result = firstNum.plus(secondNum).toNumber();
       return result;
     case '-':
-      result = firstNum - secondNum;
+      result = firstNum.minus(secondNum).toNumber();
       return result;
     default:
       return result;
