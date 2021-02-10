@@ -1,3 +1,5 @@
+import operate from './operate';
+
 const calculate = (calculatorData, btnName) => {
   const data = { ...calculatorData };
   switch (btnName) {
@@ -5,9 +7,8 @@ const calculate = (calculatorData, btnName) => {
       data.total *= -1;
       data.next *= -1;
       return data;
-    case '%':
-      data.total *= 100;
-      data.next *= 100;
+    case data.operation:
+      data.total = operate(data.total, data.next, data.operation);
       return data;
     default:
       return data;
