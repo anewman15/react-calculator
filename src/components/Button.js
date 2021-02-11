@@ -5,11 +5,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = props => (
-  <button>
-    {props.btnName}
-  </button>
-);
+const Button = props => {
+  const handleClick = btnName => props.clickHandler(btnName);
+
+  return (
+    <button onClick={handleClick}>
+      {props.btnName}
+    </button>
+  );
+};
 
 Button.propTypes = {
   btnName: PropTypes.string.isRequired,
