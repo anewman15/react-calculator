@@ -6,11 +6,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = props => {
-  const handleClick = btnName => props.clickHandler(btnName);
-
+  const { btnName, clickHandler } = props;
   return (
-    <button onClick={handleClick}>
-      {props.btnName}
+    <button onClick={() => clickHandler(btnName)}>
+      {btnName}
     </button>
   );
 };
