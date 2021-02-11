@@ -14,10 +14,12 @@ const ButtonPanel = props => {
     ['0', '.', '='],
   ];
 
+  const handleClick = btnName => props.clickHandler(btnName);
+
   const keyButtons = btnGroups.map(group => (
     <div key={group.toString()}>
       {group.map(name => (
-        <Button key={name.toString()} btnName={name} />
+        <Button key={name.toString()} btnName={name} onClick={handleClick}/>
       ))}
     </div>
   ));
