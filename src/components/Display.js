@@ -9,6 +9,10 @@ const Display = props => (
   <div>{props.calcResult}</div>
 );
 
+Display.defaultProps = {
+  calcResult: '0',
+};
+
 Display.propTypes = {
   calcResult: PropTypes.string.isRequired,
 };
