@@ -60,8 +60,8 @@ const calculate = (calculatorData, btnName) => {
     case '=':
       if (data.total && data.operation && data.next) {
         const operatedValue = operate(data.total, data.next, data.operation).toString();
-        data.display = operatedValue;
-        data.total = null;
+        data.total = operatedValue;
+        data.display = data.total;
         data.next = null;
         data.operation = null;
       }
