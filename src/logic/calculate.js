@@ -1,4 +1,4 @@
-import operate from './operate';
+// import operate from './operate';
 
 const calculate = (calculatorData, btnName) => {
   const data = { ...calculatorData };
@@ -32,9 +32,12 @@ const calculate = (calculatorData, btnName) => {
         data.next = data.next ? data.next + digit : digit;
       }
       return data;
-    // case '.':
-    //   data.total = data.total.includes('.') ? `${data.total}` : `${data.total}${'.'}`;
-    //   return data;
+    case '.':
+      data.total = data.total && data.total.includes('.') ? `${data.total}` : `${data.total}${'.'}`;
+      if (data.total && data.operation) {
+        data.next = data.next && data.next.includes('.') ? `${data.next}` : `${data.next}${'.'}`;
+      }
+      return data;
     // case operator:
     //   data.operation = operator;
     //   data.next = null;
