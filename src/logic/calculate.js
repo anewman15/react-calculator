@@ -1,4 +1,4 @@
-// import operate from './operate';
+import operate from './operate';
 
 const calculate = (calculatorData, btnName) => {
   const data = { ...calculatorData };
@@ -23,8 +23,10 @@ const calculate = (calculatorData, btnName) => {
       data.display = data.total;
       return data;
     case digit:
-      data.total = data.total ? data.total + digit : digit;
-      data.display = data.total;
+      if (!data.operation) {
+        data.total = data.total ? data.total + digit : digit;
+        data.display = data.total;
+      }
       if (data.total && data.operation) {
         data.next = data.next ? data.next + digit : digit;
         data.display = data.next;
@@ -43,6 +45,15 @@ const calculate = (calculatorData, btnName) => {
         data.operation = data.total ? operator : null;
         data.next = null;
         data.display = data.operation;
+      }
+      return data;
+    case '=':
+      if (data.total && data.operation && data.next) {
+        const operatedValue = operate(data.total, data.next, data.operation).toString();
+        data.display = operatedValue;
+        data.total = null;
+        data.next = null;
+        data.operation = null;
       }
       return data;
     default:
