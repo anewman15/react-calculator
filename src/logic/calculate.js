@@ -22,6 +22,16 @@ const calculate = (calculatorData, btnName) => {
       data.operation = null;
       data.display = data.total;
       return data;
+    case '+/-':
+      if (!data.operation && data.total) {
+        data.total = (parseFloat(data.total) * (-1)).toString();
+        data.display = data.total;
+      }
+      if (data.operation && data.next) {
+        data.next = (parseFloat(data.next) * (-1)).toString();
+        data.display = data.next;
+      }
+      return data;
     case digit:
       if (!data.operation) {
         data.total = data.total ? data.total + digit : digit;
