@@ -13,6 +13,7 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
+      display: null,
       total: null,
       next: null,
       operation: null,
@@ -23,6 +24,7 @@ export default class App extends React.Component {
 
   handleClick(btnName) {
     const calcData = {
+      display: this.state.display,
       total: this.state.total,
       next: this.state.next,
       operation: this.state.operation,
@@ -31,6 +33,7 @@ export default class App extends React.Component {
     const calcValue = calculate(calcData, btnName);
 
     this.setState({
+      display: calcValue.display,
       total: calcValue.total,
       next: calcValue.next,
       operation: calcValue.operation,
@@ -41,7 +44,7 @@ export default class App extends React.Component {
     const { total, next, operation } = this.state;
     return (
       <div>
-        <Display calcResult={this.state.total || this.props.calcResult} />
+        <Display value={this.state.display || this.props.value} />
         <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );
