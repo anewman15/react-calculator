@@ -4,25 +4,25 @@ const operate = (first, second, operation) => {
   const firstNum = new Big(first);
   const secondNum = new Big(second);
 
-  let result;
+  let calcValue;
   switch (operation) {
     case '%':
-      result = firstNum.times(100).div(secondNum).toNumber();
-      return result;
+      calcValue = firstNum.times(100).div(secondNum).toNumber();
+      return calcValue;
     case '/':
-      result = firstNum.div(secondNum).toNumber();
-      return result;
+      calcValue = firstNum.div(secondNum).toNumber();
+      return calcValue;
     case 'X':
-      result = firstNum.times(secondNum).toNumber();
-      return result;
+      calcValue = firstNum.times(secondNum).toNumber();
+      return calcValue;
     case '+':
-      result = firstNum.plus(secondNum).toNumber();
-      return result;
+      calcValue = firstNum.plus(secondNum).toNumber();
+      return calcValue;
     case '-':
-      result = firstNum.minus(secondNum).toNumber();
-      return result;
+      calcValue = firstNum.minus(secondNum).toNumber();
+      return calcValue;
     default:
-      return result;
+      return calcValue;
   }
 };
 
