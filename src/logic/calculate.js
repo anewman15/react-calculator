@@ -3,17 +3,17 @@
 const calculate = (calculatorData, btnName) => {
   const data = { ...calculatorData };
   const digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-  // const operators = ['%', '/', 'X', '+', '-'];
+  const operators = ['%', '/', 'X', '+', '-'];
 
-  // let operator;
+  let operator;
   let digit;
   if (digits.includes(btnName)) {
     digit = btnName;
   }
 
-  // if (operators.includes(btnName)) {
-  //   operator = btnName;
-  // }
+  if (operators.includes(btnName)) {
+    operator = btnName;
+  }
 
   switch (btnName) {
     case 'AC':
@@ -38,10 +38,13 @@ const calculate = (calculatorData, btnName) => {
         data.display = data.next;
       }
       return data;
-    // case operator:
-    //   data.operation = data.total ? operator : null;
-    //   data.next = null;
-    //   return data;
+    case operator:
+      if (!data.operation) {
+        data.operation = data.total ? operator : null;
+        data.next = null;
+        data.display = data.operation;
+      }
+      return data;
     default:
       return data;
   }
