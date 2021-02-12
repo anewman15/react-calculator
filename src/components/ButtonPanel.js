@@ -14,7 +14,7 @@ const ButtonPanel = props => {
     ['0', '.', '='],
   ];
 
-  const handleClick = btnName => props.clickHandler(btnName);
+  const handleClick = props.clickHandler;
 
   const keyButtons = btnGroups.map(group => (
     <div key={group.toString()}>
