@@ -6,15 +6,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Display = props => (
-  <div>{props.calcResult}</div>
+  <div>{props.value}</div>
 );
 
 Display.defaultProps = {
-  calcResult: '0',
+  value: '0',
 };
 
 Display.propTypes = {
-  calcResult: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
 };
 
 export default Display;
