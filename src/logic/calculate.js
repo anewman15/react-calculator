@@ -52,11 +52,9 @@ const calculate = (calculatorData, btnName) => {
       }
       return data;
     case operator:
-      if (!data.operation) {
-        data.operation = data.total ? operator : null;
-        data.next = null;
-        data.display = data.operation;
-      }
+      data.operation = data.total ? operator : null;
+      data.next = null;
+      data.display = `${data.total} ${data.operation}`;
       return data;
     case '=':
       if (data.total && data.operation && data.next) {
