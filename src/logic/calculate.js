@@ -25,17 +25,20 @@ const calculate = (calculatorData, btnName) => {
       return data;
     case '+/-':
       if (!data.operation && data.total) {
-        data.total = (parseFloat(data.total) * (-1)).toString();
+        const negTotal = (parseFloat(data.total) * (-1)).toString();
+        data.total = negTotal !== 'NaN' ? negTotal : 'Undefined';
         data.display = data.total;
       }
       if (data.operation && data.next) {
-        data.next = (parseFloat(data.next) * (-1)).toString();
+        const negNext = (parseFloat(data.next) * (-1)).toString();
+        data.next = negNext !== 'NaN' ? negNext : 'Undefined';
         data.display = data.next;
       }
       return data;
     case '%':
       if (data.total) {
-        data.total = (data.total / 100).toString();
+        const percentTotal = (data.total / 100).toString();
+        data.total = percentTotal !== 'NaN' ? percentTotal : 'Undefined';
       }
       data.display = data.total;
       data.operated = true;
@@ -64,9 +67,9 @@ const calculate = (calculatorData, btnName) => {
       return data;
     case operator:
       data.total = data.total ? data.total : '0';
-      data.operation = data.total ? operator : null;
+      data.operation = data.total && data.total !== 'Undefined' ? operator : null;
       data.next = null;
-      data.display = `${data.total} ${data.operation}`;
+      data.display = data.operation ? `${data.total} ${data.operation}` : data.total;
       return data;
     case '=':
       if (data.total && data.operation && data.next) {
