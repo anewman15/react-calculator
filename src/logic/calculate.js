@@ -33,6 +33,13 @@ const calculate = (calculatorData, btnName) => {
         data.display = data.next;
       }
       return data;
+    case '%':
+      if (data.total) {
+        data.total = (data.total / 100).toString();
+      }
+      data.display = data.total;
+      data.operated = true;
+      return data;
     case digit:
       if (!data.operation && data.operated === false) {
         data.total = data.total ? data.total + digit : digit;
@@ -56,6 +63,7 @@ const calculate = (calculatorData, btnName) => {
       }
       return data;
     case operator:
+      data.total = data.total ? data.total : '0';
       data.operation = data.total ? operator : null;
       data.next = null;
       data.display = `${data.total} ${data.operation}`;
