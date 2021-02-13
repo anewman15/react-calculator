@@ -21,6 +21,7 @@ const calculate = (calculatorData, btnName) => {
       data.next = 0;
       data.operation = null;
       data.display = data.total;
+      data.operated = false;
       return data;
     case '+/-':
       if (!data.operation && data.total) {
@@ -33,7 +34,7 @@ const calculate = (calculatorData, btnName) => {
       }
       return data;
     case digit:
-      if (!data.operation) {
+      if (!data.operation && data.operated === false) {
         data.total = data.total ? data.total + digit : digit;
         data.display = data.total;
       }
@@ -64,6 +65,7 @@ const calculate = (calculatorData, btnName) => {
         data.display = data.total;
         data.next = null;
         data.operation = null;
+        data.operated = true;
       }
       return data;
     default:
