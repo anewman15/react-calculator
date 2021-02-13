@@ -17,6 +17,7 @@ export default class App extends React.Component {
       total: null,
       next: null,
       operation: null,
+      operated: false,
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -28,6 +29,7 @@ export default class App extends React.Component {
       total: this.state.total,
       next: this.state.next,
       operation: this.state.operation,
+      operated: this.state.operated,
     };
 
     const calcValue = calculate(calcData, btnName);
@@ -37,6 +39,7 @@ export default class App extends React.Component {
       total: calcValue.total,
       next: calcValue.next,
       operation: calcValue.operation,
+      operated: calcValue.operated,
     });
   }
 
