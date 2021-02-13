@@ -44,7 +44,11 @@ const calculate = (calculatorData, btnName) => {
       }
       return data;
     case '.':
-      data.total = data.total && data.total.includes('.') ? `${data.total}` : `${data.total}${'.'}`;
+      if (data.total && data.operated === false) {
+        data.total = data.total.includes('.') ? `${data.total}` : `${data.total}${'.'}`;
+      } else {
+        data.total = '0.';
+      }
       data.display = data.total;
       if (data.total && data.operation) {
         data.next = data.next && data.next.includes('.') ? `${data.next}` : `${data.next}${'.'}`;
