@@ -10,7 +10,11 @@ const operate = (first, second, operation) => {
       calcValue = firstNum.times(100).div(secondNum).toNumber();
       return calcValue;
     case '/':
-      calcValue = firstNum.div(secondNum).toNumber();
+      try {
+        calcValue = firstNum.div(secondNum).toNumber();
+      } catch {
+        calcValue = 'Undefined';
+      }
       return calcValue;
     case 'X':
       calcValue = firstNum.times(secondNum).toNumber();
