@@ -6,9 +6,6 @@ const operate = (first, second, operation) => {
 
   let calcValue;
   switch (operation) {
-    case '%':
-      calcValue = firstNum.times(100).div(secondNum).toNumber();
-      return calcValue;
     case '/':
       try {
         calcValue = firstNum.div(secondNum).toNumber();
