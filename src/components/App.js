@@ -8,22 +8,8 @@ import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
 import '../styles/App.css';
 
-export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      display: null,
-      total: null,
-      next: null,
-      operation: null,
-      operated: false,
-    };
-
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(btnName) {
+const App = props => {
+  const handleClick = (btnName) => {
     const calcData = {
       display: this.state.display,
       total: this.state.total,
@@ -43,13 +29,13 @@ export default class App extends React.Component {
     });
   }
 
-  render() {
-    const { total, next, operation } = this.state;
-    return (
-      <div>
-        <Display value={this.state.display || this.props.value} />
-        <ButtonPanel clickHandler={this.handleClick} />
-      </div>
-    );
-  }
-}
+  const { total, next, operation } = this.state;
+  return (
+    <div>
+      <Display value={this.state.display || this.props.value} />
+      <ButtonPanel clickHandler={this.handleClick} />
+    </div>
+  );
+};
+
+export default App;
