@@ -2,22 +2,24 @@
  eslint-disable no-unused-vars, import/named
 */
 
-import React from 'react';
+import React, { useState } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
 import '../styles/App.css';
 
 const App = props => {
-  const handleClick = (btnName) => {
-    const calcData = {
-      display: this.state.display,
-      total: this.state.total,
-      next: this.state.next,
-      operation: this.state.operation,
-      operated: this.state.operated,
-    };
+  const [data, setData] = useState(
+    {
+      display: null,
+      total: null,
+      next: null,
+      operation: null,
+      operated: false,
+    },
+  );
 
+  const handleClick = (btnName) => {
     const calcValue = calculate(calcData, btnName);
 
     this.setState({
