@@ -19,17 +19,17 @@ const App = props => {
     },
   );
 
-  const handleClick = (btnName) => {
-    const calcValue = calculate(calcData, btnName);
-
+  const handleClick = btnName => {
+    const calcValue = calculate(data, btnName);
     this.setState({
+      ...data,
       display: calcValue.display,
       total: calcValue.total,
       next: calcValue.next,
       operation: calcValue.operation,
       operated: calcValue.operated,
     });
-  }
+  };
 
   const { total, next, operation } = this.state;
   return (
