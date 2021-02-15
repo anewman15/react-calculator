@@ -1,14 +1,16 @@
 /*
- eslint-disable no-unused-vars
+ eslint-disable no-unused-vars, import/no-cycle
 */
 
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+import { HandleClickContext } from './App';
 
 const Button = props => {
-  const { btnName, clickHandler } = props;
+  const { btnName } = props;
+  const handleClick = useContext(HandleClickContext);
   return (
-    <button onClick={() => clickHandler(btnName)}>
+    <button onClick={() => handleClick(btnName)}>
       {btnName}
     </button>
   );
