@@ -1,5 +1,5 @@
 /*
- eslint-disable no-unused-vars, import/named
+ eslint-disable no-unused-vars, import/named, import/no-cycle
 */
 
 import React, { useState } from 'react';
@@ -7,6 +7,8 @@ import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
 import '../styles/App.css';
+
+export const HandleClickContext = React.createContext();
 
 const App = props => {
   const [data, setData] = useState(
@@ -33,8 +35,10 @@ const App = props => {
 
   return (
     <div>
-      <Display value={data.display || props.value} />
-      <ButtonPanel clickHandler={handleClick} />
+      <HandleClickContext.Provider value={handleClick}>
+        <Display value={data.display || props.value} />
+        <ButtonPanel />
+      </HandleClickContext.Provider>
     </div>
   );
 };
