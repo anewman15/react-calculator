@@ -1,55 +1,46 @@
 /*
- eslint-disable no-unused-vars, import/named
+ eslint-disable no-unused-vars, import/named, import/no-cycle
 */
 
-import React from 'react';
+import React, { useState } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
 import '../styles/App.css';
 
-export default class App extends React.Component {
-  constructor(props) {
-    super(props);
+export const HandleClickContext = React.createContext();
 
-    this.state = {
+const App = props => {
+  const [data, setData] = useState(
+    {
       display: null,
       total: null,
       next: null,
       operation: null,
       operated: false,
-    };
+    },
+  );
 
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(btnName) {
-    const calcData = {
-      display: this.state.display,
-      total: this.state.total,
-      next: this.state.next,
-      operation: this.state.operation,
-      operated: this.state.operated,
-    };
-
-    const calcValue = calculate(calcData, btnName);
-
-    this.setState({
+  const handleClick = btnName => {
+    const calcValue = calculate(data, btnName);
+    setData({
+      ...data,
       display: calcValue.display,
       total: calcValue.total,
       next: calcValue.next,
       operation: calcValue.operation,
       operated: calcValue.operated,
     });
-  }
+  };
 
-  render() {
-    const { total, next, operation } = this.state;
-    return (
-      <div>
-        <Display value={this.state.display || this.props.value} />
-        <ButtonPanel clickHandler={this.handleClick} />
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <HandleClickContext.Provider value={handleClick}>
+        <Display value={data.display || props.value} />
+        <ButtonPanel />
+      </HandleClickContext.Provider>
+    </div>
+  );
+};
+
+export default App;
