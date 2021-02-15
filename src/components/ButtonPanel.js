@@ -1,5 +1,5 @@
 /*
- eslint-disable no-unused-vars
+ eslint-disable no-unused-vars, import/no-cycle
 */
 
 import React from 'react';
