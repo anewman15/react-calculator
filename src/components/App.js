@@ -34,7 +34,7 @@ const App = props => {
   const { total, next, operation } = this.state;
   return (
     <div>
-      <Display value={this.state.display || this.props.value} />
+      <Display value={data.display || props.value} />
       <ButtonPanel clickHandler={this.handleClick} />
     </div>
   );
