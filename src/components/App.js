@@ -21,7 +21,7 @@ const App = props => {
 
   const handleClick = btnName => {
     const calcValue = calculate(data, btnName);
-    this.setState({
+    setData({
       ...data,
       display: calcValue.display,
       total: calcValue.total,
@@ -31,7 +31,6 @@ const App = props => {
     });
   };
 
-  const { total, next, operation } = this.state;
   return (
     <div>
       <Display value={data.display || props.value} />
