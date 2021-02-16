@@ -34,7 +34,7 @@ const App = props => {
   };
 
   return (
-    <div>
+    <div className="app">
       <HandleClickContext.Provider value={handleClick}>
         <Display value={data.display || props.value} />
         <ButtonPanel />
