@@ -7,10 +7,13 @@ import PropTypes from 'prop-types';
 import { HandleClickContext } from './App';
 
 const Button = props => {
+  const zeroBtnWidth = {
+    width: '50%',
+  };
   const { btnName } = props;
   const handleClick = useContext(HandleClickContext);
   return (
-    <button className='btn' onClick={() => handleClick(btnName)}>
+    <button className='btn' style={btnName === '0' ? zeroBtnWidth : null} onClick={() => handleClick(btnName)}>
       {btnName}
     </button>
   );
