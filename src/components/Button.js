@@ -10,7 +10,7 @@ const Button = props => {
   const { btnName } = props;
   const handleClick = useContext(HandleClickContext);
   return (
-    <button onClick={() => handleClick(btnName)}>
+    <button className='btn' onClick={() => handleClick(btnName)}>
       {btnName}
     </button>
   );

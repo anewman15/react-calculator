@@ -19,7 +19,7 @@
 
 .display-text {
   padding: 0 5px;
-  font-size: 40px;
+  font-size: 56px;
   font-weight: bold;
   text-align: end;
 }
@@ -35,4 +35,12 @@
   justify-content: center;
   align-items: center;
   background-color: #dfdfdf;
+}
+
+.btn {
+  width: 25%;
+  border: 1px solid #d2d2d2;
+  height: 100%;
+  color: #000;
+  font-size: 32px;
 }
