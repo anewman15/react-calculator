@@ -15,17 +15,15 @@ const ButtonPanel = props => {
   ];
 
   const keyButtons = btnGroups.map(group => (
-    <div className='btn-panel'>
-      <div className='btn-group' key={group.toString()}>
-        {group.map(name => (
-          <Button key={name.toString()} btnName={name}/>
-        ))}
-      </div>
+    <div className='btn-group' key={group.toString()}>
+      {group.map(name => (
+        <Button key={name.toString()} btnName={name}/>
+      ))}
     </div>
   ));
 
   return (
-    <div>
+    <div className='btn-panel'>
       {keyButtons}
     </div>
   );
