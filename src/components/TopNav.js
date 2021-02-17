@@ -5,7 +5,7 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 
-const NavigationBar = () => (
+const TopNav = () => (
   <div>
     <Navbar bg="success" expand="lg">
       <Navbar.Brand className="text-white font-weight-bolder" href="#home">No Magic - Dumb Calculator</Navbar.Brand>
@@ -21,4 +21,4 @@ const NavigationBar = () => (
   </div>
 );
 
-export default NavigationBar;
+export default TopNav;
