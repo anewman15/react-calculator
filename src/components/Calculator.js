@@ -10,7 +10,7 @@ import '../styles/App.css';
 
 export const HandleClickContext = React.createContext();
 
-const App = props => {
+const Calculator = props => {
   const [data, setData] = useState(
     {
       display: null,
@@ -43,4 +43,4 @@ const App = props => {
   );
 };
 
-export default App;
+export default Calculator;
