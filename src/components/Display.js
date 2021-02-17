@@ -6,7 +6,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Display = props => (
-  <div>{props.value}</div>
+  <div className='display-container'>
+    <p className='display-text'>
+      {props.value}
+    </p>
+  </div>
 );
 
 Display.defaultProps = {
