@@ -4,7 +4,7 @@
 
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { HandleClickContext } from './App';
+import { HandleClickContext } from './Calculator';
 import btnBgColor from '../logic/style';
 
 const Button = props => {
