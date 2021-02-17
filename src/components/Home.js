@@ -3,7 +3,7 @@
 */
 
 import React from 'react';
-import Button from 'react-bootstrap/Button';
+import { Button, ListGroup } from 'react-bootstrap';
 
 const Home = () => (
   <div className="container container-fluid">
@@ -13,13 +13,13 @@ const Home = () => (
       React. I'll probably improve it over time. Can be used
       for basic calculations using arithmatic oeprations:
     </p>
-    <ul className="list-group w-25 mx-auto">
-      <li className="list-group-item">Addition</li>
-      <li className="list-group-item">Subtraction</li>
-      <li className="list-group-item">Multiplication</li>
-      <li className="list-group-item">Division</li>
-      <li className="list-group-item">Percent Calculation</li>
-    </ul>
+    <ListGroup className="list-group w-25 mx-auto">
+      <ListGroup.Item className="list-group-item">Addition</ListGroup.Item>
+      <ListGroup.Item className="list-group-item">Subtraction</ListGroup.Item>
+      <ListGroup.Item className="list-group-item">Multiplication</ListGroup.Item>
+      <ListGroup.Item className="list-group-item">Division</ListGroup.Item>
+      <ListGroup.Item className="list-group-item">Percent Calculation</ListGroup.Item>
+    </ListGroup>
     <div className="text-center my-4">
       <Button className="text-white" variant="success" href="/calculator">Try It Now</Button>
     </div>
