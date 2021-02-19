@@ -23,8 +23,7 @@ afterEach(() => {
 it('should render a display and button panel', () => {
   act(() => {
     render(<Calculator />, container);
-
-    expect(pretty(container.innerHTML))
-      .toMatchSnapshot();
   });
+  expect(pretty(container.innerHTML))
+    .toMatchSnapshot();
 });
