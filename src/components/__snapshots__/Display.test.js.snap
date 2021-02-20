@@ -1,3 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Display should render a display for the calculated value 1`] = `""`;
+exports[`Display should render a display for the calculated value 1`] = `
+<div
+  className="display-container"
+>
+  <p
+    className="display-text"
+  >
+    0
+  </p>
+</div>
+`;

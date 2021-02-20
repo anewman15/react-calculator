@@ -5,6 +5,7 @@
 import React from 'react';
 import { act, render } from '@testing-library/react';
 import { unmountComponentAtNode } from 'react-dom';
+import renderer from 'react-test-renderer';
 import pretty from 'pretty';
 import Display from './Display';
 
@@ -22,11 +23,11 @@ afterEach(() => {
 
 describe('Display', () => {
   it('should render a display for the calculated value', () => {
-    act(() => {
-      render(<Display />, container);
+    const tree = renderer
+      .create(<Display value='0'/>)
+      .toJSON();
 
-      expect(pretty(container.innerHTML))
-        .toMatchSnapshot();
-    });
+    expect(tree)
+      .toMatchSnapshot();
   });
 });
