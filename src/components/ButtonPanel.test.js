@@ -5,8 +5,9 @@
 import React from 'react';
 import { act, render } from '@testing-library/react';
 import { unmountComponentAtNode } from 'react-dom';
+import renderer from 'react-test-renderer';
 import pretty from 'pretty';
-import ButtonPanel from './Button';
+import ButtonPanel from './ButtonPanel';
 
 let container = null;
 beforeEach(() => {
@@ -22,11 +23,11 @@ afterEach(() => {
 
 describe('ButtonPanel', () => {
   it('should render groups of buttons', () => {
-    act(() => {
-      render(<ButtonPanel />, container);
+    const tree = renderer
+      .create(<ButtonPanel />)
+      .toJSON();
 
-      expect(pretty(container.innerHTML))
-        .toMatchSnapshot();
-    });
+    expect(tree)
+      .toMatchSnapshot();
   });
 });

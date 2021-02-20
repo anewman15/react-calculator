@@ -1,3 +1,165 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ButtonPanel should render groups of buttons 1`] = `""`;
+exports[`ButtonPanel should render groups of buttons 1`] = `
+<div
+  className="btn-panel"
+>
+  <div
+    className="btn-group"
+  >
+    <button
+      className="btn btn-clear"
+      onClick={[Function]}
+      style={null}
+    >
+      AC
+    </button>
+    <button
+      className="btn btn-toggle"
+      onClick={[Function]}
+      style={null}
+    >
+      +/-
+    </button>
+    <button
+      className="btn btn-toggle"
+      onClick={[Function]}
+      style={null}
+    >
+      %
+    </button>
+    <button
+      className="btn btn-operator"
+      onClick={[Function]}
+      style={null}
+    >
+      /
+    </button>
+  </div>
+  <div
+    className="btn-group"
+  >
+    <button
+      className="btn btn-digit"
+      onClick={[Function]}
+      style={null}
+    >
+      7
+    </button>
+    <button
+      className="btn btn-digit"
+      onClick={[Function]}
+      style={null}
+    >
+      8
+    </button>
+    <button
+      className="btn btn-digit"
+      onClick={[Function]}
+      style={null}
+    >
+      9
+    </button>
+    <button
+      className="btn btn-operator"
+      onClick={[Function]}
+      style={null}
+    >
+      X
+    </button>
+  </div>
+  <div
+    className="btn-group"
+  >
+    <button
+      className="btn btn-digit"
+      onClick={[Function]}
+      style={null}
+    >
+      4
+    </button>
+    <button
+      className="btn btn-digit"
+      onClick={[Function]}
+      style={null}
+    >
+      5
+    </button>
+    <button
+      className="btn btn-digit"
+      onClick={[Function]}
+      style={null}
+    >
+      6
+    </button>
+    <button
+      className="btn btn-operator"
+      onClick={[Function]}
+      style={null}
+    >
+      -
+    </button>
+  </div>
+  <div
+    className="btn-group"
+  >
+    <button
+      className="btn btn-digit"
+      onClick={[Function]}
+      style={null}
+    >
+      1
+    </button>
+    <button
+      className="btn btn-digit"
+      onClick={[Function]}
+      style={null}
+    >
+      2
+    </button>
+    <button
+      className="btn btn-digit"
+      onClick={[Function]}
+      style={null}
+    >
+      3
+    </button>
+    <button
+      className="btn btn-operator"
+      onClick={[Function]}
+      style={null}
+    >
+      +
+    </button>
+  </div>
+  <div
+    className="btn-group"
+  >
+    <button
+      className="btn btn-digit"
+      onClick={[Function]}
+      style={
+        Object {
+          "width": "50%",
+        }
+      }
+    >
+      0
+    </button>
+    <button
+      className="btn btn-digit"
+      onClick={[Function]}
+      style={null}
+    >
+      .
+    </button>
+    <button
+      className="btn btn-equal"
+      onClick={[Function]}
+      style={null}
+    >
+      =
+    </button>
+  </div>
+</div>
+`;

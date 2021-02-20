@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render a display and button panel 1`] = `
+exports[`Calculator should render a display and button panel 1`] = `
 <div
   className="app"
 >
