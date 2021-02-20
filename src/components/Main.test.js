@@ -5,7 +5,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { unmountComponentAtNode } from 'react-dom';
-import Routes from './Routes';
+import Main from './Main';
 
 let container = null;
 beforeEach(() => {
@@ -19,10 +19,10 @@ afterEach(() => {
   container = null;
 });
 
-describe('Routes', () => {
-  it('should render a navigation bar and routes of the site', () => {
+describe('Main', () => {
+  it('should render the TopNav and the Home page of the site', () => {
     const tree = renderer
-      .create(<Routes />)
+      .create(<Main />)
       .toJSON();
 
     expect(tree)

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Routes should render a navigation bar and routes of the site 1`] = `
+exports[`Main should render the TopNav and the Home page of the site 1`] = `
 Array [
   <div>
     <nav
