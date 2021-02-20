@@ -5,6 +5,7 @@
 import React from 'react';
 import { act, render } from '@testing-library/react';
 import { unmountComponentAtNode } from 'react-dom';
+import renderer from 'react-test-renderer';
 import pretty from 'pretty';
 import QuoteOfTheDay from './QuoteOfTheDay';
 
@@ -22,11 +23,11 @@ afterEach(() => {
 
 describe('QuoteOfTheDay', () => {
   it('should render a page with a quote', () => {
-    act(() => {
-      render(<QuoteOfTheDay />, container);
+    const tree = renderer
+      .create(<QuoteOfTheDay />)
+      .toJSON();
 
-      expect(pretty(container.innerHTML))
-        .toMatchSnapshot();
-    });
+    expect(tree)
+      .toMatchSnapshot();
   });
 });
