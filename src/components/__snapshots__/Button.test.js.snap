@@ -1,3 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button should render a button with a button name 1`] = `""`;
+exports[`Button should render a button with a button name 1`] = `
+<button
+  className="btn btn-clear"
+  onClick={[Function]}
+  style={null}
+>
+  AC
+</button>
+`;

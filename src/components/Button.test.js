@@ -5,6 +5,7 @@
 import React from 'react';
 import { act, render } from '@testing-library/react';
 import { unmountComponentAtNode } from 'react-dom';
+import renderer from 'react-test-renderer';
 import pretty from 'pretty';
 import Button from './Button';
 
@@ -22,11 +23,11 @@ afterEach(() => {
 
 describe('Button', () => {
   it('should render a button with a button name', () => {
-    act(() => {
-      render(<Button btnName="AC" />, container);
+    const tree = renderer
+      .create(<Button btnName='AC' />)
+      .toJSON();
 
-      expect(pretty(container.innerHTML))
-        .toMatchSnapshot();
-    });
+    expect(tree)
+      .toMatchSnapshot();
   });
 });
