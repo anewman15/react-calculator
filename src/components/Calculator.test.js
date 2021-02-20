@@ -5,6 +5,7 @@
 import React from 'react';
 import { act, render } from '@testing-library/react';
 import { unmountComponentAtNode } from 'react-dom';
+import renderer from 'react-test-renderer';
 import pretty from 'pretty';
 import Calculator from './Calculator';
 
@@ -21,9 +22,9 @@ afterEach(() => {
 });
 
 it('should render a display and button panel', () => {
-  act(() => {
-    render(<Calculator />, container);
-  });
-  expect(pretty(container.innerHTML))
+  const tree = renderer
+    .create(<Calculator />)
+    .toJSON();
+  expect(tree)
     .toMatchSnapshot();
 });
