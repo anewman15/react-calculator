@@ -21,10 +21,12 @@ afterEach(() => {
   container = null;
 });
 
-it('should render a display and button panel', () => {
-  const tree = renderer
-    .create(<Calculator />)
-    .toJSON();
-  expect(tree)
-    .toMatchSnapshot();
+describe('Calculator', () => {
+  it('should render a display and button panel', () => {
+    const tree = renderer
+      .create(<Calculator />)
+      .toJSON();
+    expect(tree)
+      .toMatchSnapshot();
+  });
 });
