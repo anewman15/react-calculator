@@ -14,9 +14,15 @@ describe('Calculate function', () => {
     expect(calcValue.display).toBe(0);
   });
 
-  it('returns a negative of the total when btnName is +/-', () => {
+  it('returns a display of negative of the total when btnName is +/-', () => {
     calculatorData.total = 25;
     const calcValue = calculate(calculatorData, '+/-');
     expect(calcValue.display).toBe('-25');
+  });
+
+  it('returns a display of percentage of total when btnName is %', () => {
+    calculatorData.total = 250;
+    const calcValue = calculate(calculatorData, '%');
+    expect(calcValue.display).toBe('2.5');
   });
 });
