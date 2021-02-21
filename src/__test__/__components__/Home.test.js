@@ -7,7 +7,7 @@ import { act, render } from '@testing-library/react';
 import { unmountComponentAtNode } from 'react-dom';
 import renderer from 'react-test-renderer';
 import pretty from 'pretty';
-import QuoteOfTheDay from './QuoteOfTheDay';
+import Home from '../../components/Home';
 
 let container = null;
 beforeEach(() => {
@@ -21,10 +21,10 @@ afterEach(() => {
   container = null;
 });
 
-describe('QuoteOfTheDay', () => {
-  it('should render a page with a quote', () => {
+describe('Home', () => {
+  it('should render a Home page with information aboutt the app', () => {
     const tree = renderer
-      .create(<QuoteOfTheDay />)
+      .create(<Home />)
       .toJSON();
 
     expect(tree)

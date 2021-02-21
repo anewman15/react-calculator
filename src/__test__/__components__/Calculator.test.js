@@ -7,7 +7,7 @@ import { act, render } from '@testing-library/react';
 import { unmountComponentAtNode } from 'react-dom';
 import renderer from 'react-test-renderer';
 import pretty from 'pretty';
-import Calculator from './Calculator';
+import Calculator from '../../components/Calculator';
 
 let container = null;
 beforeEach(() => {

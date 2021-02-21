@@ -7,7 +7,7 @@ import { act, render } from '@testing-library/react';
 import { unmountComponentAtNode } from 'react-dom';
 import renderer from 'react-test-renderer';
 import pretty from 'pretty';
-import Display from './Display';
+import QuoteOfTheDay from '../../components/QuoteOfTheDay';
 
 let container = null;
 beforeEach(() => {
@@ -21,10 +21,10 @@ afterEach(() => {
   container = null;
 });
 
-describe('Display', () => {
-  it('should render a display for the calculated value', () => {
+describe('QuoteOfTheDay', () => {
+  it('should render a page with a quote', () => {
     const tree = renderer
-      .create(<Display value='0'/>)
+      .create(<QuoteOfTheDay />)
       .toJSON();
 
     expect(tree)

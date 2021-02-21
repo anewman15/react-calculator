@@ -3,9 +3,11 @@
 */
 
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { act, render } from '@testing-library/react';
 import { unmountComponentAtNode } from 'react-dom';
-import TopNav from './TopNav';
+import renderer from 'react-test-renderer';
+import pretty from 'pretty';
+import Display from '../../components/Display';
 
 let container = null;
 beforeEach(() => {
@@ -19,10 +21,10 @@ afterEach(() => {
   container = null;
 });
 
-describe('TopNav', () => {
-  it('should render a navigation bar at the top of the site', () => {
+describe('Display', () => {
+  it('should render a display for the calculated value', () => {
     const tree = renderer
-      .create(<TopNav />)
+      .create(<Display value='0'/>)
       .toJSON();
 
     expect(tree)

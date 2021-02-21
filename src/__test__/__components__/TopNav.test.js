@@ -3,11 +3,9 @@
 */
 
 import React from 'react';
-import { act, render } from '@testing-library/react';
-import { unmountComponentAtNode } from 'react-dom';
 import renderer from 'react-test-renderer';
-import pretty from 'pretty';
-import Button from './Button';
+import { unmountComponentAtNode } from 'react-dom';
+import TopNav from '../../components/TopNav';
 
 let container = null;
 beforeEach(() => {
@@ -21,10 +19,10 @@ afterEach(() => {
   container = null;
 });
 
-describe('Button', () => {
-  it('should render a button with a button name', () => {
+describe('TopNav', () => {
+  it('should render a navigation bar at the top of the site', () => {
     const tree = renderer
-      .create(<Button btnName='AC' />)
+      .create(<TopNav />)
       .toJSON();
 
     expect(tree)

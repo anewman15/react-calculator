@@ -3,11 +3,9 @@
 */
 
 import React from 'react';
-import { act, render } from '@testing-library/react';
-import { unmountComponentAtNode } from 'react-dom';
 import renderer from 'react-test-renderer';
-import pretty from 'pretty';
-import Home from './Home';
+import { unmountComponentAtNode } from 'react-dom';
+import Main from '../../components/Main';
 
 let container = null;
 beforeEach(() => {
@@ -21,10 +19,10 @@ afterEach(() => {
   container = null;
 });
 
-describe('Home', () => {
-  it('should render a Home page with information aboutt the app', () => {
+describe('Main', () => {
+  it('should render the TopNav and the Home page of the site', () => {
     const tree = renderer
-      .create(<Home />)
+      .create(<Main />)
       .toJSON();
 
     expect(tree)

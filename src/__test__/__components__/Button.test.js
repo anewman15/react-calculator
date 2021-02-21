@@ -7,7 +7,7 @@ import { act, render } from '@testing-library/react';
 import { unmountComponentAtNode } from 'react-dom';
 import renderer from 'react-test-renderer';
 import pretty from 'pretty';
-import ButtonPanel from './ButtonPanel';
+import Button from '../../components/Button';
 
 let container = null;
 beforeEach(() => {
@@ -21,10 +21,10 @@ afterEach(() => {
   container = null;
 });
 
-describe('ButtonPanel', () => {
-  it('should render groups of buttons', () => {
+describe('Button', () => {
+  it('should render a button with a button name', () => {
     const tree = renderer
-      .create(<ButtonPanel />)
+      .create(<Button btnName='AC' />)
       .toJSON();
 
     expect(tree)
