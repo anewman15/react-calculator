@@ -43,4 +43,10 @@ describe('Calculate function', () => {
     const calcValue = calculate(calculatorData, '5');
     expect(calcValue.display).toBe('2505');
   });
+
+  it('returns a display with a operator appended when btnName is a operator', () => {
+    calculatorData.total = '250';
+    const calcValue = calculate(calculatorData, '+');
+    expect(calcValue.display).toBe('250 +');
+  });
 });
