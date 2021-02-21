@@ -49,4 +49,12 @@ describe('Calculate function', () => {
     const calcValue = calculate(calculatorData, '+');
     expect(calcValue.display).toBe('250 +');
   });
+
+  it('returns a display with a the value of the operate function when btnName is a =', () => {
+    calculatorData.total = '250';
+    calculatorData.next = '10';
+    calculatorData.operation = '/';
+    const calcValue = calculate(calculatorData, '=');
+    expect(calcValue.display).toBe('25');
+  });
 });
