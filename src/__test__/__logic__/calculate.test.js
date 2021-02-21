@@ -13,4 +13,10 @@ describe('Calculate function', () => {
     const calcValue = calculate(calculatorData, 'AC');
     expect(calcValue.display).toBe(0);
   });
+
+  it('returns a negative of the total when btnName is +/-', () => {
+    calculatorData.total = 25;
+    const calcValue = calculate(calculatorData, '+/-');
+    expect(calcValue.display).toBe('-25');
+  });
 });
