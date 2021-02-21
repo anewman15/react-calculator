@@ -37,4 +37,10 @@ describe('Calculate function', () => {
     const calcValue = calculate(calculatorData, '.');
     expect(calcValue.display).toBe('250.');
   });
+
+  it('returns a display with a digit appended to the total when btnName is a digit', () => {
+    calculatorData.total = '250';
+    const calcValue = calculate(calculatorData, '5');
+    expect(calcValue.display).toBe('2505');
+  });
 });
