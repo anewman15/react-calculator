@@ -9,6 +9,7 @@ exports[`ButtonPanel should render groups of buttons 1`] = `
   >
     <button
       className="btn btn-clear"
+      id="btn-(AC)"
       onClick={[Function]}
       style={null}
     >
@@ -16,6 +17,7 @@ exports[`ButtonPanel should render groups of buttons 1`] = `
     </button>
     <button
       className="btn btn-toggle"
+      id="btn-(+/-)"
       onClick={[Function]}
       style={null}
     >
@@ -23,6 +25,7 @@ exports[`ButtonPanel should render groups of buttons 1`] = `
     </button>
     <button
       className="btn btn-toggle"
+      id="btn-(%)"
       onClick={[Function]}
       style={null}
     >
@@ -30,6 +33,7 @@ exports[`ButtonPanel should render groups of buttons 1`] = `
     </button>
     <button
       className="btn btn-operator"
+      id="btn-(/)"
       onClick={[Function]}
       style={null}
     >
@@ -41,6 +45,7 @@ exports[`ButtonPanel should render groups of buttons 1`] = `
   >
     <button
       className="btn btn-digit"
+      id="btn-(7)"
       onClick={[Function]}
       style={null}
     >
@@ -48,6 +53,7 @@ exports[`ButtonPanel should render groups of buttons 1`] = `
     </button>
     <button
       className="btn btn-digit"
+      id="btn-(8)"
       onClick={[Function]}
       style={null}
     >
@@ -55,6 +61,7 @@ exports[`ButtonPanel should render groups of buttons 1`] = `
     </button>
     <button
       className="btn btn-digit"
+      id="btn-(9)"
       onClick={[Function]}
       style={null}
     >
@@ -62,6 +69,7 @@ exports[`ButtonPanel should render groups of buttons 1`] = `
     </button>
     <button
       className="btn btn-operator"
+      id="btn-(X)"
       onClick={[Function]}
       style={null}
     >
@@ -73,6 +81,7 @@ exports[`ButtonPanel should render groups of buttons 1`] = `
   >
     <button
       className="btn btn-digit"
+      id="btn-(4)"
       onClick={[Function]}
       style={null}
     >
@@ -80,6 +89,7 @@ exports[`ButtonPanel should render groups of buttons 1`] = `
     </button>
     <button
       className="btn btn-digit"
+      id="btn-(5)"
       onClick={[Function]}
       style={null}
     >
@@ -87,6 +97,7 @@ exports[`ButtonPanel should render groups of buttons 1`] = `
     </button>
     <button
       className="btn btn-digit"
+      id="btn-(6)"
       onClick={[Function]}
       style={null}
     >
@@ -94,6 +105,7 @@ exports[`ButtonPanel should render groups of buttons 1`] = `
     </button>
     <button
       className="btn btn-operator"
+      id="btn-(-)"
       onClick={[Function]}
       style={null}
     >
@@ -105,6 +117,7 @@ exports[`ButtonPanel should render groups of buttons 1`] = `
   >
     <button
       className="btn btn-digit"
+      id="btn-(1)"
       onClick={[Function]}
       style={null}
     >
@@ -112,6 +125,7 @@ exports[`ButtonPanel should render groups of buttons 1`] = `
     </button>
     <button
       className="btn btn-digit"
+      id="btn-(2)"
       onClick={[Function]}
       style={null}
     >
@@ -119,6 +133,7 @@ exports[`ButtonPanel should render groups of buttons 1`] = `
     </button>
     <button
       className="btn btn-digit"
+      id="btn-(3)"
       onClick={[Function]}
       style={null}
     >
@@ -126,6 +141,7 @@ exports[`ButtonPanel should render groups of buttons 1`] = `
     </button>
     <button
       className="btn btn-operator"
+      id="btn-(+)"
       onClick={[Function]}
       style={null}
     >
@@ -137,6 +153,7 @@ exports[`ButtonPanel should render groups of buttons 1`] = `
   >
     <button
       className="btn btn-digit"
+      id="btn-(0)"
       onClick={[Function]}
       style={
         Object {
@@ -148,6 +165,7 @@ exports[`ButtonPanel should render groups of buttons 1`] = `
     </button>
     <button
       className="btn btn-digit"
+      id="btn-(.)"
       onClick={[Function]}
       style={null}
     >
@@ -155,6 +173,7 @@ exports[`ButtonPanel should render groups of buttons 1`] = `
     </button>
     <button
       className="btn btn-equal"
+      id="btn-(=)"
       onClick={[Function]}
       style={null}
     >
