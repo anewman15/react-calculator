@@ -20,8 +20,8 @@ const Home = () => (
       <ListGroup.Item className="list-group-item">Division</ListGroup.Item>
       <ListGroup.Item className="list-group-item">Percent Calculation</ListGroup.Item>
     </ListGroup>
-    <div className="text-center my-4">
-      <Button className="text-white" variant="success" href="/calculator">Try It Now</Button>
+    <div className="text-center my-5">
+      <Button className="text-white w-50" variant="success" href="/calculator">Try It Now</Button>
     </div>
   </div>
 );
