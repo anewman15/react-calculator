@@ -4,22 +4,10 @@
 
 import React from 'react';
 import { act, render } from '@testing-library/react';
-import { unmountComponentAtNode } from 'react-dom';
 import renderer from 'react-test-renderer';
+import { mount } from 'enzyme';
 import pretty from 'pretty';
 import Calculator from '../../components/Calculator';
-
-let container = null;
-beforeEach(() => {
-  container = document.createElement('div');
-  document.body.appendChild(container);
-});
-
-afterEach(() => {
-  unmountComponentAtNode(container);
-  container.remove();
-  container = null;
-});
 
 describe('Calculator', () => {
   it('should render a display and button panel', () => {
@@ -28,5 +16,25 @@ describe('Calculator', () => {
       .toJSON();
     expect(tree)
       .toMatchSnapshot();
+  });
+
+  describe('display', () => {
+    let wrapper;
+    let displayText;
+    let btnAC;
+    beforeEach(() => {
+      wrapper = mount(<Calculator />);
+      btnAC = wrapper.find('#btn-(AC)');
+    });
+
+    afterEach(() => {
+      btnAC.simulate('click');
+    });
+
+    it('sets the display to zero when AC is clicked', () => {
+      btnAC.simulate('click');
+      displayText = wrapper.find('.display-text');
+      expect(displayText.text()).toBe('0');
+    });
   });
 });
