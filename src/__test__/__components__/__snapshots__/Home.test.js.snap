@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should render a Home page with information aboutt the app 1`] = `
+<div
+  className="container container-fluid"
+>
+  <h1
+    className="text-center mt-4"
+  >
+    Over the Counter Calculator
+  </h1>
+  <p
+    className="display-5 my-4"
+  >
+    This is one of the primitive calculators. Built with React. I'll probably improve it over time. Can be used for basic calculations using arithmatic oeprations:
+  </p>
+  <div
+    className="list-group w-25 mx-auto list-group"
+    onKeyDown={[Function]}
+  >
+    <div
+      className="list-group-item list-group-item"
+      data-rb-event-key={null}
+      disabled={false}
+      onClick={[Function]}
+    >
+      Addition
+    </div>
+    <div
+      className="list-group-item list-group-item"
+      data-rb-event-key={null}
+      disabled={false}
+      onClick={[Function]}
+    >
+      Subtraction
+    </div>
+    <div
+      className="list-group-item list-group-item"
+      data-rb-event-key={null}
+      disabled={false}
+      onClick={[Function]}
+    >
+      Multiplication
+    </div>
+    <div
+      className="list-group-item list-group-item"
+      data-rb-event-key={null}
+      disabled={false}
+      onClick={[Function]}
+    >
+      Division
+    </div>
+    <div
+      className="list-group-item list-group-item"
+      data-rb-event-key={null}
+      disabled={false}
+      onClick={[Function]}
+    >
+      Percent Calculation
+    </div>
+  </div>
+  <div
+    className="text-center my-5"
+  >
+    <a
+      className="text-white w-50 btn btn-success"
+      href="/calculator"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+    >
+      Try It Now
+    </a>
+  </div>
+</div>
+`;
