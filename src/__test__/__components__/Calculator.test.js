@@ -25,6 +25,10 @@ describe('Calculator', () => {
     beforeEach(() => {
       wrapper = mount(<Calculator />);
       btnAC = wrapper.find('#btn-(AC)');
+      const btnTwo = wrapper.find('#btn-(2)');
+      const btnFive = wrapper.find('#btn-(5)');
+      btnTwo.simulate('click');
+      btnFive.simulate('click');
     });
 
     afterEach(() => {
@@ -35,6 +39,13 @@ describe('Calculator', () => {
       btnAC.simulate('click');
       displayText = wrapper.find('.display-text');
       expect(displayText.text()).toBe('0');
+    });
+
+    it('adds a digit when a digit is clicked', () => {
+      const btnZero = wrapper.find('#btn-(0)');
+      btnZero.simulate('click');
+      displayText = wrapper.find('.display-text');
+      expect(displayText.text()).toContain('0');
     });
   });
 });
