@@ -14,10 +14,13 @@ const Button = props => {
     width: '50%',
   };
   return (
-    <button id={`btn-${btnName}`} className={`btn ${btnBgColor(btnName)}`}
+    <button
+      id={`btn-(${btnName})`}
+      className={`btn ${btnBgColor(btnName)}`}
       style={btnName === '0' ? zeroBtnWidth : null}
-      onClick={() => handleClick(btnName)}>
-      {btnName}
+      onClick={() => handleClick(btnName)}
+    >
+        {btnName}
     </button>
   );
 };
