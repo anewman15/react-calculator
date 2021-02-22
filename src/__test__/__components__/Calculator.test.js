@@ -47,5 +47,12 @@ describe('Calculator', () => {
       displayText = wrapper.find('.display-text');
       expect(displayText.text()).toContain('0');
     });
+
+    it('adds an operator when an operator is clicked', () => {
+      const btnMult = wrapper.find('#btn-(X)');
+      btnMult.simulate('click');
+      displayText = wrapper.find('.display-text');
+      expect(displayText.text()).toContain('X');
+    });
   });
 });
