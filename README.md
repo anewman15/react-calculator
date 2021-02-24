@@ -18,6 +18,15 @@ This is a Calculator app created using React
 ## Live Demo
 Available [here](https://calculator-anewman15.herokuapp.com/)
 
+## Deployment
+1. Open your Terminal from a folder of your choice and clone [this repo](https://github.com/anewman15/react-calculator/)
+2. Navigate to the project directory
+3. Run `npm install`
+4. Then run `npm run start`
+5. Open `http://localhost:3000` in your browser and navigate around the site.
+6. Navigate through the website and find the Calculator app page
+7. Make calculations
+
 ## Author
 
 👤 **Abdullah Numan**
