@@ -6,9 +6,14 @@ This is a Calculator app created using React
 ## Built With
 1. JavaScript / ES6
 2. React.js
-3. HTML5
-5. CSS3
+3. Jest
+4. Enzyme
+5. HTML5
+6. CSS3
 
+
+## App Screenshot
+![App Screenshot](./app-screenshot.png)
 
 ## Live Demo
 Available [here](https://calculator-anewman15.herokuapp.com/)
