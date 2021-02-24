@@ -27,6 +27,9 @@ Available [here](https://calculator-anewman15.herokuapp.com/)
 6. Navigate through the website and find the Calculator app page
 7. Make calculations
 
+## Testing
+1. Run `npm run test` in the Terminal to run the tests
+
 ## Author
 
 👤 **Abdullah Numan**
