@@ -16,7 +16,7 @@ This is a Calculator app created using React
 ![App Screenshot](./app-screenshot.png)
 
 ## Live Demo
-Available [here](https://calculator-anewman15.herokuapp.com/)
+Available [here](https://calculator-anewman15.netlify.app)
 
 ## Deployment
 1. Open your Terminal from a folder of your choice and clone [this repo](https://github.com/anewman15/react-calculator/)
